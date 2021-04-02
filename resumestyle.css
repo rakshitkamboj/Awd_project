@@ -41,108 +41,159 @@ section{width: auto;height: 70vh;}
 .text-center {
     text-align: center;
 }
-/*About Section*/
-#name{font-weight: bold;color: white;font-size: 70px;text-align: center;margin-top: 130px;margin-bottom: 0px}
-/*#social li{margin: 10px;border-radius: 50%}
-#social li :hover{ ;}*/
-#social li a img {
-    width: 1rem;
-    padding: 8px;
+#membership{
+            background-color: purple;
+            display: flex;
+            justify-content: space-around;
+            padding: 30px;
 }
-#social li {
-    border-radius: 50%;
+.price{
+            height: 350px;
+            width: 270px;
+            border-radius: 1.5rem;
+            border-style: double;
+            border-width: 7px;
+            background-color: white;
+        }
+        .price>h4{
+            font-size: 20px;
+            text-align: center;
+        }
+        #free{
+            margin-left: 125px;
+        }
+        #gold{
+        }
+        #platinum{
+            margin-right: 125px;
+        }
+        #AboutWeb{
+            background-color: lightgrey;
+            padding: 30px;
+        }
+        .Impacted{
+            display:inline-block;
+            height: 200px;
+            width: 200px;
+        }
+        .Impacted>b{
+            font-weight: bolder;
+            font-size: 34px;            
+            text-align: center;
+        }
+        .Impacted>p{
+            font-size: 20px;
+        }
+        .Impacted>ul{
+            text-align: center;
+        }
+        .price>button{
+            margin-left: 95px;  }
+        #CalInfo{
+            display: flex;
+            justify-content: space-around;
+        }
+        h2{
+  color: #1F64F3;
+}
+a:link {
+  color:#1F64F3 ;
 }
 
-#social li:hover {
-    box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
+.flex-item:hover {
+  background-color: #5DBAD3 ;
+  color:white;
+
 }
-#my-img{border-radius: 50%;margin-top:-70px;position: relative ;border:1.5px solid white;box-shadow: 0px 0px 6px 4px grey}
-
-
-/*Skills Section*/
-.skill-section{margin: 40px;
-    height: 400px;
-display: flex;
-flex-direction: column;
-align-items: center;
-font-weight: 400px;
-font-size: 30px;}
-
-.skill-section i{color: blue;
-    padding: 5px
-}
-
-.skill-icons{
-    width: 80%;
+.flex-container {  
+    display: -webkit-flex;  
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    /*flex-direction: row; */
+   flex-wrap: wrap;
+   font-weight: "Lucida Console", "Courier New", monospace;;
+   font-size:20px;
+
+    /*width: 1000px; */
+    /*justify-content: center;
+    height: 1000px;  
+   align-items: center; */
+   background-color: #F4FDFF;
+      margin-left: 200px;
+      margin-right:200px;
+}  
+.flex-item {  
+    /*background-color: brown;  */
+    width: 400px;  
+    height: 300px;  
+    margin: 30px;  
+    flex:40%;
     flex-wrap: wrap;
-}
-.skill-progress{background-color: grey;
-    margin: 40px;
-border-radius: 30px;
-width: 130px;
-height: 30px;}
-
-.skill-value{border-radius:30px 0px 0px 30px ;
-height: 30px;}
-
-#Cplus{background-color: orange;
-width: 60%;}
-#html{background-color: purple;
-width: 80%}
-#css{background-color: cyan;
-width: 90%}
-#Javascript{background-color: orange;
-width: 70%;}
-#Android{background-color: purple;
-width: 100%;
-border-radius: 30px;}
-#IOS{background-color: cyan;
-width: 100%;border-radius: 30px;}
-
-
+    word-spacing: 2px;
+   /* border: solid 1px black;*/
+   /* flex-direction: row; */
+    align-content: space-around;
+    box-shadow: 0.5 0.5 .50  black;
+    border-radius: 5%;
+    /margin-bottom: 10px;/
+   /* margin-left: 20px;*/
+}  
 .skill-icons div div span{padding: 15px;color: white;font-size: 1.5rem;}
 
-/*ContactSection*/
 
-#contact-bg{background: linear-gradient(to right,#2857a4,#403066);width: 95%;height: 400px;}
-
-/*Experience Section*/
-.work-exp{
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    margin-top: 80px;
+#lower-footer{background: linear-gradient(to right,#2857a4,#403066);width: 100%;height: 100px;}
+#upper-footer{background: lightblue;width: 100%;height: 80vh;display: flex;justify-content: space-evenly;
 }
-#exp-main{width: 80%;
-height: 450px;
-border:2px solid black;}
+#social-footer li a img {
+    width: 1.5rem;
+    padding: 8px;
+}
+#social-footer{
+   position: absolute;
+   padding-left: 620px;
 
-#experience i{color: blue;
-padding: 5px}
-.exp-box{position: relative;
-    width: 40%;
-height: 100px;
-border: 2px solid blue;
-margin: 5px;
-margin-left: 5% 
 
 }
-.exp-box:nth-child(2n){left: 53%}
+#innerDiv1{
 
-/*#exp-main:nth-child(2n) {border-radius: 30px}*/
-p:nth-child(2) {
-  background: red;
+    border: 1px solid black;
+    padding: 50px;
+    width: 200px;
+   
 }
-.timeline-divider {
-    position: absolute;
-    height: 75%;
-    width: 0;
-    border: 3px dashed #0096fa6b;
-    margin-top: 10%;
-    left: 50%;
+#innerDiv2{
+
+    border: 1px solid black;
+    padding: 50px;
+    width: 200px;
+}
+#innerDiv3{
+
+    border: 1px solid black;
+    padding: 50px;
+    width: 200px;
+}
+#circle-{
+    width: 100px;
+    height: 100px;
+   position: fixed;
+   right: 0px;
+   bottom: 0px;
+   border: 1px solid black;
+   border-radius: 50%;
 }
 
-#timeline i{margin-left: 0px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
