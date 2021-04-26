@@ -5,7 +5,7 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
     font-size: 14px;
-    background-color: #C1C8E4;
+    background-color: #84CEEB;
     align-items: start;
     min-height: 100vh;
   }
@@ -24,7 +24,7 @@
     background-attachment: fixed;
 }
 #nav_bar{
-    background-color: #84ceeb;
+    background-color: #84CEEB;
     border-color: #E7E7E7;
 }
 .Register{
@@ -68,7 +68,7 @@
 
 /*MEMBERSHIP STARTED*/
 #membership{
-  background-color: purple;
+  background-image: linear-gradient(to right,#C1C8E4,#8860D0);
   display: flex;
   justify-content: space-around;
   padding: 30px;
@@ -112,7 +112,7 @@
 
 /*ABOUT US WALA*/
 #AboutWeb{
-  background-color: lightgrey;
+  background-color: #C1C8E4;
   padding: 30px;
 }
 .Impacted{
@@ -139,13 +139,13 @@
 
 /*            Ritika              */
 .flex-item h2{
-  color: #1F64F3;
+  color: #8860D0;
 }
 .flex-item a:link {
-  color:#1F64F3 ;
+  color:#8860D0 ;
 }
 .flex-item:hover {
-   background-color: #5DBAD3 ;
+   background-color: #C1C8E4;
   width: 40px;
   height: 40px;
   transition: width 1s, height 1s;
@@ -190,7 +190,6 @@
 
 
 
-
 /*RAKSHIT KA FOOTER*/
 .skill-icons div div span{
   padding: 15px;
@@ -200,7 +199,7 @@
 
 #lower-footer{background: linear-gradient(to right,#2857a4,#403066);width: 100%;height: 100px;}
 #upper-footer{
-  background: lightblue;width: 100%;
+  background-image :linear-gradient(to right,#C1C8E4,#8860D0);width: 100%;
   height: 105vh;
   display: flex;
   justify-content: space-around;
@@ -234,7 +233,7 @@
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
-    color: #1F64F3;
+    color: #84CEEB;
 }
 #innerDiv1 h3{
   display: block;
@@ -270,9 +269,9 @@
     height: 600px;
 }
 .rankbutton{
-  background-color: lightblue;
+  background-color: #84CEEB;
   color: black;
-  border: 2px solid #4CAF50; 
+  border: 2px solid #5AB9EA; 
   height: 50px;
   width: 125px;
   border-radius: 1rem;
@@ -295,9 +294,9 @@
   display: flex;
   flex-flow: row wrap;
   padding: 30px 30px 20px 30px;
-  color: #2f2f2f;
+  color: #5680E9;
   background-color: #fff;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #5680E9;
 }
   
 .footer > * {
@@ -329,7 +328,7 @@
   
   .footer address {
     font-style: normal;
-    color: #999;
+    color: #5680E9;
   }
   
   .footer__btn {
@@ -338,7 +337,7 @@
     justify-content: center;
     height: 36px;
     max-width: max-content;
-    background-color: rgb(33, 33, 33, 0.07);
+    background-image: linear-gradient(#84CEEB,#5AB9EA);
     border-radius: 100px;
     color: #2f2f2f;
     line-height: 0;
@@ -371,7 +370,7 @@
   }
   
   .nav__ul a {
-    color: #999;
+    color: #5680E9;
   }
   
   .nav__ul--extra {
@@ -382,7 +381,7 @@
   .legal {
     display: flex;
     flex-wrap: wrap;
-    color: #999;
+    color: #5680E9;
   }
     
   .legal__links {
@@ -391,7 +390,7 @@
   }
   
   .heart {
-    color: #2f2f2f;
+    color: #8860D0;
   }
   
   @media screen and (min-width: 24.375em) {
@@ -455,7 +454,7 @@ button {
   font-family: inherit;
 }
 button.btn {
-  width: 14rem;
+  width: 12rem;
   height: auto;
 }
 button.btn .circle {
@@ -498,8 +497,8 @@ button.btn .circle .icon.arrow::before {
 button.btn .button-text {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
-  top: 8px;
-  left: 10px;
+  top: 7px;
+  left: 20px;
   right: 0;
   bottom: 0;
   padding: 0.75rem 0;
