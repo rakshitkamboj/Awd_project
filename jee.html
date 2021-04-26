@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JEE Main Rank Predictor</title>
+	<style type="text/css">
+		.ALL{
+			border-color:pink;
+			width: 1000px;
+			margin: auto;
+			border-width: 2px;
+			line-height: 1.6;
+			font-size: 20px;
+			padding: 10px;
+			font-family: serif;		}
+		/*#one{
+			font-family: Monospace;
+
+		
+		}
+		#two ol li{
+			font-family: Monospace;
+
+		}*/
+		#one a{
+			text-decoration: none;
+
+		}
+		a:hover {
+			color: pink;
+		}
+		h2{
+			text-align: center;
+		}
+		td{
+			padding: 1.5rem 3rem;
+    		text-align: left;
+    		border-bottom: 1px solid #e8e8e8;
+    		line-height: 1.5;
+    		border-spacing: 2px;
+
+		}
+		#score{
+			display: block;
+    		height: 14px;
+    		padding: 20px 30px;
+    		border: 0;
+    		outline: none;
+    		color: #151515;
+    		font-size: 1.5rem;
+    		max-width: 100px ;
+    		background: rgba(0,0,0,.12);
+    		-webkit-transition: all .3s ease-in-out;
+    		transition: all .3s ease-in-out;
+    		margin-bottom: 1rem;
+
+
+		}
+		#category{
+    		border:none;
+    		outline: none;
+    		padding: 20px 40px;
+    		background: rgba(0,0,0,.12);
+    		margin-bottom: 1rem;
+		}
+		#submit_button{
+			border:none;
+    		outline: none;
+    		padding: 15px 30px;
+    		background: rgba(0,0,0,.12);
+    		margin-bottom: 1rem;
+    		font-size: 15px;
+		}
+		#title_home{
+			background-color: black;
+			height: 170px;
+			margin-bottom: 50px;
+			width: 100%;
+			margin-top: 0px;
+		}
+		.title__home{
+			background-color: black;
+			color: white;
+		}
+		#title{
+			padding-top: 50px;
+			text-align: center;
+
+		}
+		#title h1{
+			
+		}
+		#Home{
+			position: fixed;
+			font-size: 25px;
+			padding: 20px;
+
+		}	
+
+</style>
+</head>
+<body style="width: 100%">
+
+<div id="title_home">
+	<div class="title__home" id="Home">Home</div>
+	<div class="title__home" id="title"><h1>JEE Main Rank Predictor</h1></div>
+</div>
+<div class="ALL" style="border-style: solid;">
+	<p id="one">JEE Main Rank Predictor 2021 is a tool to predict JEE main rank in 2021. The rank is predicted based on marks vs percentile vs rank information collected from 2017 to 2020. For details on how these data points are used to predict JEE Main Rank do visit college predictor dot [AI].We also have a set after the JEE exam tools. You might be interested to take a look at <a href="#">JEE Main College Predictor</a>, <a href="#">JEE Advance Rank Predictor</a> and <a href="#">JEE advanced College Predictor</a>. The College predictors give a list of rank wise college lists for different categories, rounds, and years. Do take a look and don’t forget to share it with friends.</p>
+	<br>
+
+	<p id="two">
+		<h4 style="font-size: 30px;font-family:Arial, Helvetica, sans-serif;">JEE Main Rank Predictor: Features</h4>
+		<ol>
+  		<li>The Rank predictor will predict the expected rank for JEE main 2020 for expected marks in the mock test or final JEE main exam.</li>
+  		<li>Build on a solid mathematical foundation.</li>
+  		<li>Predict JEE Main ranks for all categories (Open, BC, SC, ST, and yes even EWS).</li>
+  		<li>The highest marks in JEE Main 2017 were 350 and for JEE main 2018 it was for 360 marks. Don’t forget to normalize them to 300 marks if you want to verify old scores.</li>
+  		<li>A range of Ranks is provided for available adjacent marks and the final rank is predicted based on linear interpolation.</li>
+  		<li>The approximate number of candidates for given marks are calculated based on 2018, 2018, 2019 data.</li>
+		</ol>
+	</p>
+<p id="three">
+	We tried our best to make JEE main rank predictor as much accurate as possible using advanced mathematical modeling. In case you are not convinced or have a question or any issue or just have a recommendation for us, please feel free to drop a comment at All About Cutoff and predictors.
+</p>
+<p style="font-style: italic;">All updated data is available to our corporate partners through APIs. Contact us from your official email at <b>partners@ini.ac</b> for details.
+
+</p>
+</div>
+<h2>JEE Main Rank Predictor 2021</h2>
+<form id="theForm">
+	<table id="ini_form_table" style="width: 500px; margin: 0px auto;">
+		<tbody>
+			<tr>
+				<td>JEE Main Marks <br>(Out of 300)</td>
+				<td><input id="score" name="score" type="text"></td>
+			</tr>
+			<tr><td>Category</td>
+				<td>
+					<select id="category" name="category">
+						<option value="open">OPEN</option>
+						<option value="ews">EWS</option>
+						<option value="bc">OBC - NCL</option>
+						<option value="sc">SC</option>
+						<option value="st">ST</option> 
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input name="action" type="hidden" value="ini_jee_rank">
+				</td>
+				<td>
+					<input id="submit_button" value="Dont Be Shy, Click : ) " type="button" >
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</form>
+</body>
+</html>
+
+
