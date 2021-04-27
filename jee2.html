@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JEE Main Collage Predictor</title>
+	<style type="text/css">
+		.ALL{
+			border-color:pink;
+			width: 1000px;
+			margin: auto;
+			border-width: 2px;
+			line-height: 1.6;
+			font-size: 20px;
+			padding: 10px;
+			font-family: serif;		}
+		/*#one{
+			font-family: Monospace;
+
+		
+		}
+		#two ol li{
+			font-family: Monospace;
+
+		}*/
+		.one a{
+			text-decoration: none;
+
+		}
+		a:hover {
+			color: pink;
+		}
+		h2{
+			text-align: center;
+		}
+		td{
+			padding: 1.5rem 3rem;
+    		text-align: left;
+    		border-bottom: 1px solid #e8e8e8;
+    		line-height: 1.5;
+    		border-spacing: 2px;
+
+		}
+		
+		#score{
+			display: block;
+    		height: 14px;
+    		padding: 20px 30px;
+    		border: 0;
+    		outline: none;
+    		color: #151515;
+    		font-size: 1.5rem;
+    		max-width: 100px ;
+    		background: rgba(0,0,0,.12);
+    		-webkit-transition: all .3s ease-in-out;
+    		transition: all .3s ease-in-out;
+    		margin-bottom: 1rem;
+
+
+		}
+		#category,#seatpool,#round,#year,#branch,#institute{
+			border:none;
+    		outline: none;
+    		padding: 20px 40px;
+    		background: rgba(0,0,0,.12);
+    		margin-bottom: 1rem;
+		}
+		#submit_button{
+			border:none;
+    		outline: none;
+    		padding: 15px 30px;
+    		background: rgba(0,0,0,.12);
+    		margin-bottom: 1rem;
+    		font-size: 15px;
+		}
+		#title_home{
+			background-color: black;
+			height: 170px;
+			margin-bottom: 50px;
+			width: 100%;
+			margin-top: 0px;
+		}
+		.title__home{
+			background-color: black;
+			color: white;
+		}
+		#title{
+			padding-top: 50px;
+			text-align: center;
+
+		}
+		#title h1{
+			
+		}
+		#Home{
+			position: fixed;
+			font-size: 25px;
+			padding: 20px;
+
+		}	
+
+</style>
+</head>
+<body style="width: 100%">
+
+<div id="title_home">
+	<div class="title__home" id="Home">Home</div>
+	<div class="title__home" id="title"><h1>JEE Main Collage Predictor</h1></div>
+</div>
+<div class="ALL" style="border-style: solid;">
+	<p class="one">JEE main college predictor is a collection of rank wise list of NITs, IIITs, and other Government funded institutes since 2014. All data is carefully obtained from JOSAA official website after the final round. The JEE main cutoff is the most exhaustive JEE cutoff tool, which is free, and no registration is needed.</p>
+
+	<p class="one">
+		JEE Main is conducted by NTA and admission counseling is conducted by JOSAA. Joint Seat Allocation Authority (JoSAA) conducts counseling B.Tech admissions in NITs, IIITs, and other institutes based on JEE Mains. There are 7 rounds of admissions and all rounds cutoff (both opening and closing ranks) are presented rank wise, college wise, and course wise in the cutoff tool. We also have important tools Like <a href="#">JEE Main Rank Predictor</a>, <a href="#">JEE Advance Rank Predictor</a> and <a href="#">JEE advanced College Predictor</a>. The College predictors give a list of rank wise college lists for different categories, rounds, and years. Do take a look and don’t forget to share it with friends.
+	</p>
+	<p>
+		There are two JEE papers conducted. JEE Main paper 1 is for admission into engineering courses and paper 2 is for architecture and planning related subjects. JOSAA conducts undergrad admission for both the papers. Therefore, ranks related to architecture and planning are based on paper 2 and other subject cutoffs are for JEE main paper 1. This will answer which college can I get with xyz rank or percentile in JEE mains.
+	</p>
+
+	<p id="two">
+		<h4 style="font-size: 30px;font-family:Arial, Helvetica, sans-serif;">JEE Main College Predictor Key Features</h4>
+		<ol>
+			<li>
+				Opening and closing ranks for all Categories (OC, EWS, OBC, SC, and ST). It also includes PWD (Persons with Disability) for JEE Mains.
+			</li>
+  			<li>
+  				JEE cutoff for both Gender Neutral and Female only seats.
+  			</li>
+  			<li>
+  				College wise, course wise JEE Main cutoff for each NIT, IIIT, GFTIs.
+  			</li>
+  			<li>
+  				All India (IIITs, and other institutes), Home State, and Other State cut off.
+  			</li>
+		</ol>
+	</p>
+	<p id="three">
+		We tried our best to make the tool as accurate and easy to use as possible. However, if you have a question or suggestion or improvements regarding this tool please drop a comment at InI Community for JEE cutoff and College Predictor tool.
+	</p>
+	<p style="font-style: italic;">
+		All updated data is available to our corporate partners through APIs. Contact us from your official email at <b>partners@ini.ac</b> for details.
+	</p>
+</div>
+<h2>JEE Main Collage Predictor 2021</h2>
+<form id="theForm">
+	<table id="ini_form_table" style="width: 500px; margin: 0px auto;">
+		<tbody>
+			<tr>
+				<td>Your JEE Rank</td>
+				<td><input id="score" name="score" type="text"></td>
+			</tr>
+			<tr>
+				<td>Category</td>
+				<td>
+					<select id="category" name="category">
+						<option value="OP"> Open / OC / GEN</option>
+						<option value="EWS"> EWS</option>
+						<option value="BC"> OB / OBC</option>
+						<option value="SC"> SC</option>
+						<option value="ST"> ST</option>
+						<option value="OP_PWD"> Open / OC / GEN PWD</option>
+						<option value="EWS_PWD"> EWS PWD</option>
+						<option value="BC_PWD"> OB / OBC PWD</option>
+						<option value="SC_PWD"> SC PWD</option>
+						<option value="ST_PWD"> ST PWD</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<td>
+					<select id="seatpool" name="seatpool">
+						<option value="GN" selected="selected">Gender Neutral</option>
+						<option value="FO">Female Only</option>
+						<option value="both">Both</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Round</td>
+				<td>
+					<select id="round" name="round">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Year</td>
+				<td>
+					<select id="year" name="year">
+						<option value="2019"> 2019</option>
+						<option value="2018"> 2018</option>
+						<option value="2017"> 2017</option>
+						<option value="2016"> 2016</option>
+						<option value="2015"> 2015</option>
+						<option value="2014"> 2014</option>
+						<option value="2013"> 2013</option>
+						<option value="2012"> 2012</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Preferred Branch</td>
+				<td>
+					<select id="branch" name="branch">
+						<option value="ALL">All</option>
+						<option value="AE">Aerospace Engineering</option>
+						<option value="AG">Agricultural Engineering</option>
+						<option value="AR">Architecture and Planning</option>
+						<option value="BM">BioMedical</option>
+						<option value="BT">Biotechnology</option>
+						<option value="CR">Ceramic Engineering</option>
+						<option value="CE">Civil Engineering</option>
+						<option value="CH">Chemical Engineering</option>
+						<option value="CS">Computer Science and Information Technology</option>
+						<option value="DS">Design</option>
+						<option value="HS">Economics</option>
+						<option value="CY">Chemistry</option>
+						<option value="EC">Electronics and Communication Engineering</option>
+						<option value="EE">Electrical Engineering</option>
+						<option value="EN">Energy Engineering</option>
+						<option value="EY">Environment Engineering</option>
+						<option value="FT">Food Technology</option>
+						<option value="GG">Geology and Geophysics</option>
+						<option value="IN">Instrumentation Engineering</option>
+						<option value="MA">Mathematics</option>
+						<option value="ME">Mechanical Engineering</option>
+						<option value="MN">Mining Engineering</option>
+						<option value="MT">Metallurgical Engineering</option>
+						<option value="OE">Ocean Engineering and Naval Architecture</option>
+						<option value="PE">Petroleum Engineering</option>
+						<option value="PH">Physics</option>
+						<option value="PI">Production and Industrial Engineering</option>
+						<option value="TF">Textile Engineering and Fibre Science</option>
+						<option value="XE">Engineering Sciences</option>
+						<option value="XL">Life Sciences</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Institute</td>
+				<td> 
+					<select id="institute" name="institute">
+						<option value="All"> All</option>
+						<option value="nit"> NITs</option>
+						<option value="iiit"> IIITs</option>
+						<option value="others"> Other JoSSA Colleges</option> 
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input name="action" type="hidden" value="ini_jee_main_list">
+				</td>
+				<td>
+					<input id="submit_button" value="Dont Be Shy, Click : ) " type="button" onclick="submit_me();">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</form>
+</body>
+</html>
+
+
+
+
