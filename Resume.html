@@ -88,7 +88,7 @@
     -o-transform: scale(1, 1);
     transform: scale(1, 1);
   }
-  #mainButton .modal {
+  #mainButton .modal,#membership_modal1,#membership_modal2,#membership_modal3 {
     top: 0;
     left: 0;
     z-index: 3;
@@ -203,8 +203,7 @@
     transform: translateY(-20px);
   }
   
-  
-  
+
     </style>
 </head>
 <body>
@@ -346,7 +345,7 @@
     <section id="membership">
         <div class="price" id="free">
             <h4>PREVIEW</h4>
-            <hr style="height:2px;border-width:0;color:black;background-color:black;width:80%">
+            <hr style="height:2px;border-width:0;color:black;background-color:black;width:88%">
             <ul>
                 <li>
                     <strong>
@@ -399,9 +398,8 @@
                     Personalised mentoring, goal monitoring and 24*7 support for 1 year.
                 </li>
             </ul>
-            <div id="mainButton">
-                <div class="btn-text" onclick="openForm()">Free</div>
-                <div class="modal">
+                <div id="Membership_button1" class="btn btn-primary" onclick="openForm()">Free</div>
+                <div id="membership_modal1"class="modal">
                     <div class="close-button" onclick="closeForm()">x</div>
                     <div class="form-title">Sign Up</div>
                     <div class="input-group">
@@ -429,15 +427,13 @@
                         <input type="password" id="password" onblur="checkInput(this)" />
                         <label for="password">Confirm Password</label>
                     </div>
-                    <div class="form-button" onclick="closeForm()">Go</div>
-                    
+                    <div class="form-button" onclick="closeForm()">Go</div> 
                 </div>
-            </div>
         </div>
         </div>
         <div class="price" id="gold">
             <h4>EXPLORE</h4>
-            <hr style="height:2px;border-width:0;color:black;background-color:black;width:80%">
+            <hr style="height:2px;border-width:0;color:black;background-color:black;width:88%">
             <ul>
                 <li>
                     <strong>
@@ -490,9 +486,8 @@
                     Personalised mentoring, goal monitoring and 24*7 support for 1 year.
                 </li>
             </ul>
-            <div id="mainButton">
-                <div class="btn-text" onclick="openForm()">300</div>
-                <div class="modal">
+                <div id ="Membership_button2" class="btn btn-primary" onclick="openForm()">₹300</div>
+                <div id="membership_modal2" class="modal">
                     <div class="close-button" onclick="closeForm()">x</div>
                     <div class="form-title">Sign Up</div>
                     <div class="input-group">
@@ -523,12 +518,12 @@
                     <div class="form-button" onclick="closeForm()">Go</div>
                     
                 </div>
-            </div>
+            
         </div>
         </div>
         <div class="price" id="platinum">
             <h4>REALIZE</h4>
-            <hr style="height:2px;border-width:0;color:black;background-color:black;width:80%">
+            <hr style="height:2px;border-width:0;color:black;background-color:black;width:88%">
             <ul>
                 <li>
                     <strong>
@@ -581,9 +576,8 @@
                     Personalised mentoring, goal monitoring and 24*7 support for 1 year.
                 </li>
             </ul>
-            <div id="mainButton">
-                <div class="btn-text" onclick="openForm()">500</div>
-                <div class="modal">
+                <div id="Membership_button3" class="btn btn-primary" onclick="openForm()">₹500</div>
+                <div id="membership_modal3" class="modal">
                     <div class="close-button" onclick="closeForm()">x</div>
                     <div class="form-title">Sign Up</div>
                     <div class="input-group">
@@ -614,7 +608,6 @@
                     <div class="form-button" onclick="closeForm()">Go</div>
                     
                 </div>
-            </div>
         </div>
         </div>
     </section>
