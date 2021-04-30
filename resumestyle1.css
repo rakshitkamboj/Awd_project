@@ -116,9 +116,6 @@
 .locked{
     color:#888;
 }
-hr{
-  padding: none;
-}
 /*MEMBERSHIP ENDED*/
 
 /*ABOUT US WALA*/
@@ -532,11 +529,7 @@ button:hover .circle .icon.arrow {
 button:hover .button-text {
   color: #fff;
 }
-
-
-
-  #container {
-    grid-area: main;
-    align-self: center;
-    justify-self: center;
-  }
+#container {
+  grid-area: main;
+  align-self: center;
+  justify-self: center;

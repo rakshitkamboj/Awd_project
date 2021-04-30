@@ -8,6 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
@@ -304,35 +305,40 @@
                 </ul>
                 <div id="mainButton">
                     <div class="btn-text" onclick="openForm()">Sign Up</div>
-                    <div class="modal">
+                    <div class="modal" onsubmit="return Validation()">
                         <div class="close-button" onclick="closeForm()">x</div>
                         <div class="form-title">Sign Up</div>
                         <div class="input-group">
                             <input type="text" id="name" onblur="checkInput(this)" />
                             <label for="name">Username</label>
-                        </div>
-                        
-                        <div class="input-group">
-                            <input type="text" id="name" onblur="checkInput(this)" />
-                            <label for="name">Class</label>
+                            <span id="name_error" class="text-danger font-weight-bold"></span>
                         </div>
                         <div class="input-group">
-                            <input type="password" id="password" onblur="checkInput(this)" />
-                            <label for="password">Field of Interest</label>
+                            <input type="text" id="Class" onblur="checkInput(this)" />
+                            <label for="Class">Class</label>
+                            <span id="class_error" class="text-danger font-weight-bold"></span>
                         </div>
                         <div class="input-group">
-                            <input type="password" id="password" onblur="checkInput(this)" />
-                            <label for="password">State</label>
+                            <input type="text" id="Email" onblur="checkInput(this)" />
+                            <label for="Email">Email</label>
+                            <span id="email_error" class="text-danger font-weight-bold"></span>
+                        </div>
+                        <div class="input-group">
+                            <input type="number" id="PhoneNo" onblur="checkInput(this)" />
+                            <label for="PhoneNo">Phone No.</label>
+                            <span id="phone_error" class="text-danger font-weight-bold"></span>
                         </div>
                         <div class="input-group">
                             <input type="password" id="password" onblur="checkInput(this)" />
                             <label for="password">Password</label>
+                            <span id="pass_error" class="text-danger font-weight-bold"></span>
                         </div>
                         <div class="input-group">
-                            <input type="password" id="password" onblur="checkInput(this)" />
-                            <label for="password">Confirm Password</label>
+                            <input type="password" id="Confirm_password" onblur="checkInput(this)" />
+                            <label for="Confirm_password">Confirm Password</label>
+                            <span id="cpass_error" class="text-danger font-weight-bold"></span>
                         </div>
-                        <div class="form-button" onclick="closeForm()">Go</div>
+                        <div class="form-button">Go</div>
                         
                     </div>
                 </div>
@@ -844,34 +850,34 @@
             
             <div class="legal">
               <p>&copy; 2021 Copyright. All rights reserved.</p>
-              
               <div class="legal__links">
                 <span>Made with <span class="heart">♥</span> By Us</span>
               </div>
             </div>
           </footer>
-          <script>
-              var button = document.getElementById('mainButton');
+          <script >
+              
+var button = document.getElementById('mainButton');
 
 var openForm = function() {
-	button.className = 'active';
+    button.className = 'active';
 };
 
 var checkInput = function(input) {
-	if (input.value.length > 0) {
-		input.className = 'active';
-	} else {
-		input.className = '';
-	}
+    if (input.value.length > 0) {
+        input.className = 'active';
+    } else {
+        input.className = '';
+    }
 };
 var closeForm = function() {
-	button.className = '';
+    button.className = '';
 };
 
 document.addEventListener("keyup", function(e) {
-	if (e.keyCode == 27 || e.keyCode == 13) {
-		closeForm();
-	}
+    if (e.keyCode == 27 || e.keyCode == 13) {
+        closeForm();
+    }
 });
 
 // Get the modal
