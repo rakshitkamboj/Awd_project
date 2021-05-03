@@ -89,12 +89,11 @@
   background-color: white;
   padding-top: 20px;
   padding-right: 10px;
-  padding-left: 34px;
 }
 .price>h4{
   font-size: 20px;
   text-align: center;
-  padding-right: 34px;
+
 }
 #free{
   margin-left: 80px;
@@ -104,14 +103,8 @@
 #platinum{
   margin-right: 80px;
 }
-#Membership_button1,#Membership_button2,#Membership_button3{
-  margin-left: 84px;
-}
-#Membership_button2,#Membership_button3{
-  margin-left: 84px;
-}
-#Membership_button3{
-  margin-left: 84px;
+.price button{
+  margin-left: 57px;
 }
 .locked{
     color:#888;
