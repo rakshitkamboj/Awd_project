@@ -168,7 +168,7 @@ form .user-details .input-box{
   <div class="container">
     <div class="title">Sign Up</div>
     <div class="content">
-      <form onsubmit="return validation()">
+      <form  id="contactForm" onsubmit="return validatePassword() ">
         <div class="user-details">
           <div class="input-box">
             <span class="details">Full Name</span>
@@ -220,25 +220,63 @@ form .user-details .input-box{
         <div class="button">
           <input type="submit" value="Sign Up">
         </div>
+        
       </form>
     </div>
   </div>
-
+  <button id="submitt">Submit</button>
+  <script src=
+  "https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+  </script>
 
   <script>
     var password = document.getElementById("password")
   , confirm_password = document.getElementById("Confirm_password");
-
+  var firebaseConfig = {
+    apiKey: "AIzaSyCoYaY3RtzKGLZeT1gzaoOY2zgw_MxeZ0Y",
+    authDomain: "careercounselling-42088.firebaseapp.com",
+    databaseURL: "https://careercounselling-42088-default-rtdb.firebaseio.com",
+    projectId: "careercounselling-42088",
+    storageBucket: "careercounselling-42088.appspot.com",
+    messagingSenderId: "82986918340",
+    appId: "1:82986918340:web:8a44ca303147476b4f0491",
+    measurementId: "G-9ZECQ9C6XE"
+  };
+  
+        firebase.initializeApp(firebaseConfig);
+  var FullName, UserName, PhoneNumber, password, email;
+  function Ready(){
+    FullName = document.getElementById('Fullname').value;
+    UserName = document.getElementById('Username').value;
+    PhoneNumber = document.getElementById('PhoneNo').value;
+    password = document.getElementById('password').value;
+    email = document.getElementById('Email').value;
+  }
 function validatePassword(){
   if(password.value != confirm_password.value) {
     confirm_password.setCustomValidity("Passwords Don't Match");
   } else {
     confirm_password.setCustomValidity('');
+   
+        
+          Ready();
+          firebase.database().ref('users/'+ UserName).set({
+            name:FullName,
+            userName: UserName,
+            phoneNo : PhoneNumber,
+            password : password,
+            Email: email,
+          })
+        
+
   }
 }
 
 password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
+
+
+
   </script>
 
 <!--   <script type="text/javascript">
