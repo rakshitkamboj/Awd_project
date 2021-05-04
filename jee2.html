@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JEE Main Collage Predictor</title>
+	<title>JEE Main College Predictor</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
@@ -59,7 +59,7 @@
 
 
 		}
-		#category,#seatpool,#round,#year,#branch,#institute{
+		#category,#seatpool,#round,#year,#branch,#institute,#myBtn{
 			border:none;
     		outline: none;
     		padding: 20px 40px;
@@ -182,7 +182,7 @@
 
 <div id="title_home">
 	<div class="title__home" id="Home">Home</div>
-	<div class="title__home" id="title"><h1>JEE Main Collage Predictor</h1></div>
+	<div class="title__home" id="title"><h1>JEE Main College Predictor</h1></div>
 </div>
 <div class="ALL" style="border-style: solid;">
 	<p class="one">JEE main college predictor is a collection of rank wise list of NITs, IIITs, and other Government funded institutes since 2014. All data is carefully obtained from JOSAA official website after the final round. The JEE main cutoff is the most exhaustive JEE cutoff tool, which is free, and no registration is needed.</p>
@@ -331,21 +331,14 @@
 					</select>
 				</td>
 			</tr>
-			<tr>
-				<td>
-					<input name="action" type="hidden" value="ini_jee_main_list">
-				</td>
-				<td>
-					
-				</td>
-			</tr>
+			
 		</tbody>
 	</table>
 
 </form>
 
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">Dont Be Shy, Click : )</button>
+<button id="myBtn" style="margin-left: 40%">Dont Be Shy, Click : )</button>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -369,24 +362,45 @@
       <tr class="thead-dark">
         <th>S.No.</th>
         <th>Institute/College</th>
+        <th>City</th>
         <th>State</th>
+        <th>Hostel Facility</th>
+        <th>Transport Facility</th>
+
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>1</td>
         <td>Chitkara University</td>
+        <td>Rajpura</td>
         <td>Punjab</td>
+        <td>Yes</td>
+        <td>Yes</td>
       </tr>
       <tr>
         <td>2</td>
         <td>Chitkara University</td>
+        <td>Baddi</td>
         <td>Himachal Pradesh</td>
+        <td>Yes</td>
+        <td>Yes</td>
       </tr>
       <tr>
         <td>3</td>
         <td>Chandigarh University</td>
+        <td>Mohali</td>
         <td>Punjab</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+      	<td>4</td>
+      	<td>Thapar University</td>
+      	<td>Patiala</td>
+      	<td>Punjab</td>
+      	<td>Yes</td>
+      	<td>Yes</td>
       </tr>
     </tbody>
   </table>
