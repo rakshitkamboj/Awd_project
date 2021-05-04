@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JEE Main Collage Predictor</title>
+	<title>JEE Main College Predictor</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
 	<style type="text/css">
 		.ALL{
 			border-color:pink;
@@ -56,7 +59,7 @@
 
 
 		}
-		#category,#seatpool,#round,#year,#branch,#institute{
+		#category,#seatpool,#round,#year,#branch,#institute,#myBtn{
 			border:none;
     		outline: none;
     		padding: 20px 40px;
@@ -97,13 +100,89 @@
 
 		}	
 
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: #fefefe;
+  width: 100%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #8860D0;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
 </style>
 </head>
 <body style="width: 100%">
 
 <div id="title_home">
 	<div class="title__home" id="Home">Home</div>
-	<div class="title__home" id="title"><h1>JEE Main Collage Predictor</h1></div>
+	<div class="title__home" id="title"><h1>JEE Main College Predictor</h1></div>
 </div>
 <div class="ALL" style="border-style: solid;">
 	<p class="one">JEE main college predictor is a collection of rank wise list of NITs, IIITs, and other Government funded institutes since 2014. All data is carefully obtained from JOSAA official website after the final round. The JEE main cutoff is the most exhaustive JEE cutoff tool, which is free, and no registration is needed.</p>
@@ -252,17 +331,113 @@
 					</select>
 				</td>
 			</tr>
-			<tr>
-				<td>
-					<input name="action" type="hidden" value="ini_jee_main_list">
-				</td>
-				<td>
-					<input id="submit_button" value="Dont Be Shy, Click : ) " type="button" onclick="submit_me();">
-				</td>
-			</tr>
+			
 		</tbody>
 	</table>
+
 </form>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn" style="margin-left: 40%">Dont Be Shy, Click : )</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+    	<h1>Colleges</h1>   
+      <span class="close">&times;</span>
+      
+    </div>
+    <div class="modal-body">
+      <div class="container">
+	<br>
+ 
+     
+  <p>Here's the list of appropriate colleges filtered according to the choices filled:</p>
+        
+  <table class="table table-hover">
+    <thead>
+      <tr class="thead-dark">
+        <th>S.No.</th>
+        <th>Institute/College</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Hostel Facility</th>
+        <th>Transport Facility</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Chitkara University</td>
+        <td>Rajpura</td>
+        <td>Punjab</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Chitkara University</td>
+        <td>Baddi</td>
+        <td>Himachal Pradesh</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Chandigarh University</td>
+        <td>Mohali</td>
+        <td>Punjab</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+      	<td>4</td>
+      	<td>Thapar University</td>
+      	<td>Patiala</td>
+      	<td>Punjab</td>
+      	<td>Yes</td>
+      	<td>Yes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div> 
+    </div>
+   
+  </div>
+
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>
 
