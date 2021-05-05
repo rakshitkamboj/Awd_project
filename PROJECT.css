@@ -19,7 +19,7 @@
 #body-header {
     height: 65vh;
     margin-top: 56px;
-    background-image: url(images/img-1.jpeg);
+    background-image: url(images/img-9.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -115,11 +115,19 @@
 #AboutWeb{
   background-color: #C1C8E4;
   padding: 30px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+#AboutWeb h2{
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
 }
 .Impacted{
   display:inline-block;
-  height: 200px;
+  height: 110px;
   width: 200px;
+  text-align: center;
 }
 .Impacted>b{
   font-weight: bolder;
