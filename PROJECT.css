@@ -98,8 +98,7 @@
 #free{
   margin-left: 80px;
 }
-#gold{
-}
+
 #platinum{
   margin-right: 80px;
 }
@@ -282,7 +281,7 @@
   color: black;
   border: 2px solid #5AB9EA; 
   height: 50px;
-  width: 125px;
+  width: 140px;
   border-radius: 1rem;
   margin-left: 27px;
                     
@@ -534,3 +533,4 @@ button:hover .button-text {
   grid-area: main;
   align-self: center;
   justify-self: center;
+}
