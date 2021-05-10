@@ -55,12 +55,13 @@
 
 
 		}
-		#category{
+		#category,#lastbtn{
     		border:none;
     		outline: none;
     		padding: 20px 40px;
     		background: rgba(0,0,0,.12);
     		margin-bottom: 1rem;
+
 		}
 		#submit_button{
 			border:none;
@@ -149,13 +150,20 @@
 				<td>
 					<input name="action" type="hidden" value="ini_jee_rank">
 				</td>
-				<td>
-					<input id="submit_button" value="Dont Be Shy, Click : ) " type="button" >
-				</td>
+				
 			</tr>
 		</tbody>
 	</table>
 </form>
+<button id="lastbtn" onclick="myFunction()"style="margin-left: 45%">Dont Be Shy, Click : )</button>
+<script type="text/javascript">
+	
+function myFunction() {
+   alert("Our server is currently down.\nPlease try again later.");
+}
+</script>
+
+
 </body>
 </html>
 
