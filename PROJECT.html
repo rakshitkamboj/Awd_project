@@ -12,6 +12,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
+        
+        .counter{
+
+            font-size: 25px;
+        }
+
         /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -144,28 +150,29 @@
             Impact of iDreamCareer
         </h2>
         <br>
-        <p style="margin: 20px 0px 20px 0px; font-size: 26px" >
-            iDreamCareer is the <b>INDIA’S LARGEST</b> unbiased career counseling venture that works with 
-            <b>2.5 MILLION STUDENTS</b> yearly while ensuring <b>100% DATA PRIVACY</b>. We currently work with 12 Indian State Governments & <b>73000+</b> schools across India & the Middle East.
-        </p>
+       
         <div id="CalInfo">
             <div class="Impacted">
-                <b>17.8 M</b>
-                <p>Students Empowered</p>
+                <div class="counter" data-target="80000">0 </div>
+                <p >Students Empowered</p>
             </div>
             <div class="Impacted">
-                <b>73.5 K</b>
+                <div class="counter" data-target="23500">0 </div>
                 <p>Schools Impacted</p>
             </div>
             <div class="Impacted" >
-                <b>1.5 K</b>
+               <div class="counter" data-target="9500">0 </div>
                 <p>Trained Counsellors</p>
             </div>
             <div class="Impacted">
-                <b>14</b>
+               <div class="counter" data-target="500">0 </div>
                 <p>Govt. Partnerships</p>
             </div>
         </div>
+         <p style="margin: 20px 0px 20px 0px; font-size: 26px" >
+            iDreamCareer is the <b>INDIA’S LARGEST</b> unbiased career counseling venture that works with 
+            <b>2.5 MILLION STUDENTS</b> yearly while ensuring <b>100% DATA PRIVACY</b>. We currently work with 12 Indian State Governments & <b>73000+</b> schools across India & the Middle East.
+        </p>
     </section>
     <div class="flex-container" id="CarrerSolutions">
         <div class="flex-item">
@@ -542,6 +549,35 @@
             </div>
           </footer>
           <script >
+const counters = document.querySelectorAll('.counter');
+const speed = 500; // The lower the slower
+
+counters.forEach(counter => {
+    const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+
+        // Lower inc to slow and higher to slow
+        const inc = target / speed;
+
+        // console.log(inc);
+        // console.log(count);
+
+        // Check if target is reached
+        if (count < target) {
+            // Add inc to count and output in counter
+            counter.innerText = count + inc;
+            // Call function every ms
+            setTimeout(updateCount, 1);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    updateCount();
+});
+
+
 
 function myFunction() {
    alert("Our server is currently down.\nPlease try again later.");

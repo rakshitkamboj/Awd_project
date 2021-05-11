@@ -17,7 +17,7 @@
   box-sizing: border-box;
 }
 #body-header {
-    height: 65vh;
+    height: 60vh;
     margin-top: 56px;
     background-image: url(images/img-9.jpg);
     background-size: cover;
@@ -125,8 +125,9 @@
 .Impacted{
   display:inline-block;
   height: 110px;
-  width: 200px;
+  width: 300px;
   text-align: center;
+
 }
 .Impacted>b{
   font-weight: bolder;
@@ -134,7 +135,8 @@
   text-align: center;
 }
 .Impacted>p{
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: bold;
 }
 .Impacted>ul{
   text-align: center;
