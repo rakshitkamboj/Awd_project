@@ -11,7 +11,7 @@
 	<style>
 body{
 	 background-image:linear-gradient(to bottom,#C1C8E4,#8860D0,#C1C8E4);
-	 
+	 font-family: ;
 }
 /* Add a black background color to the top navigation */
 .topnav {
@@ -74,7 +74,7 @@ body{
 	width:800px;
 	background-color:#F5E6CC;
 	padding-left: 30px;
-	border: 2px solid black;
+ border: 2px solid black; 
 	/*margin:10px;*/
 }
 img{
@@ -95,6 +95,7 @@ div.item {
     /* The width of the container also implies margin around the images. */
     width: 220px;
     height:200px;
+    border: none;
     /*border-radius:70%;*/
  /*   margin:10px;*/
  padding: 10px;
@@ -126,6 +127,7 @@ div.item {
 	border:2px solid black;
 	padding:10px;
 	width:400px;
+  border: none;
 	/*display: flex;*/
 
 }
@@ -136,10 +138,25 @@ button{
 	cursor: pointer;
 /*	float: left;*/
 	display: block;
+  width:90px;
 	margin:2px;
 }
 button:hover{
 	background-color: lightblue;
+}
+.btn{
+	border:0.2px solid blue;
+	color:blue;
+	padding: 10px;
+	cursor: pointer;
+/*	float: left;*/
+/*	display: block;*/
+	margin:2px;
+	background-color: #f7f7f7;
+	
+}
+.btn:hover{
+background-color: lightblue;
 }
 .Register{
     padding: 9px 25px;
@@ -149,6 +166,7 @@ button:hover{
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
+
 </style>
 </head>
 <body>
@@ -164,13 +182,11 @@ button:hover{
 		<ASIDE>
 		<div class="login">
   <h1>Login</h1>
-    
-      <input type="text"  placeholder="Username"  id="UserName"/>
-      <input type="password"  placeholder="Password"  id="pass" />
-        <button type="submit"  id="submit" onclick="submiit()">Let me in.</button>
-        <h4 id="name"></h4>
-        <h4 id="email"></h4>
-        <h4 id="phone"></h4>
+   <!--  <form method="post"> -->
+      <input type="text" name="u" placeholder="Username" required="required" />
+        <input type="password" name="p" placeholder="Password" required="required" />
+        <button type="submit" class="btn btn-info btn-block">Let me in.</button>
+   <!--  </form> -->
     </div>
 </ASIDE>
 	</div>
@@ -228,30 +244,61 @@ button:hover{
  <div class="item">
     <img src="images\telescope.jpg"/>
     <span class="caption"><i>Astronomer </i></span>
-		</div></div>
+    </div></div>
+
+    <div class="one" style="padding: 25px;">
+      <h2><i>JEE Main April and May exam postponed due to COVID-19; new dates will be announced later:</i></h2>
+      <p>JEE Main 2021 Admit Card for Phase – III will be released by NTA post the new exam dates for JEE Main April session are released.
+         Successfully registered candidates can download JEE Main Admit card from nta.ac.in or jeemain.nta.nic.in by logging in with their Application Number and DOB. 
+        Candidates must carry an original ID with their hall ticket for entry in JEE Main Exam Center.</p>
+        <a href="https://testservices.nic.in/jeemainadmitcard/DownloadAdmitCard/AuthCand.aspx">Download the admit card here.</a> </p>
 </div>
 
+		<div class="two"  style="padding: 30px;">
+      <h2><i>Best books to crack NEET 2021:</i></h2>
+      <p>
+        NEET preparation revolves around the base element – books. Getting sorted with the right mix of NEET preparation books is the priority of every NEET aspirant.
+         Hundreds of books are available for NEET, however, having the knowledge of picking the best book for preparation is imp
+         Hence, we bring to you the best set of books for NEET for Physics, Chemistry, and Biology to successfully qualify the NEET UG exam.</p>
+         <a href="https://www.neetexambooster.in/books/neet-books-pdf-free-download/">Click here for PDFs of the books.</a>
+
+</div>
+
+		<div class="three"  style="padding: 30px;">
+
+          <h2><i>Graduate Aptitude Test in Engineering (GATE):</i></h2>
+          <p>he online application processing system or GOAPS is the GATE login. Indian Institute of Technology Bombay,
+             the conducting institute of GATE 2021 has opened the online application processing system on September 11.
+             All the process of application and the related processes will be done through the online application processing system of GATE.</p>
+             <a href="https://appsgate.iitb.ac.in/">Login here, if already registered.</a>
+</div>
+</div>
 <div class="right">
 
 	<div class="subs">
 		<h5><i>Which subjects are you interseted in?</i></h5>
 		<br>
-	<table><tr><td>
-		<button id="ButtonId1">Mathematics</button>
-		<button id="ButtonId2">History</button>
-		<button id="ButtonId3">Biology</button>
-		<!-- <button id="ButtonId4">Economics</button> -->
-		<button id="ButtonId5">Accountancy</button></td>
-		<td><img src="images\utd3.png" style="float:right; width:250px;height:215px;"></td></tr>
-	</table>
+    <table><tr><td>
+      <button id="ButtonId1" >Maths</button>
+      <button id="ButtonId2" >History</button>
+      <button id="ButtonId3" >Biology</button>
+      <button id="ButtonId5" >Accounts</button></td>
+      <td><img src="images\utd3.png" style="float:right; width:250px;height:215px;"></td></tr>
+    </table>
 
 	</div>
 	<div class="clg">
    <h5 ><i>Which class are you studying in?</i></h5><br>
     <table>
     	<tr><td>
-    <button>9th &nbsp;</button><button>10th</button><button>11th</button><button>12th</button></td><td>
-    <button>&nbsp; 1st year <!-- &nbsp; --></button><button>&nbsp;2nd year<!-- &nbsp; --></button><button>&nbsp; 3rd year<!-- &nbsp; --></button><button>&nbsp;final year</button></td>
+    <button onclick="myFunction()" >9th &nbsp;</button>
+    <button onclick="myFunction()">10th</button>
+    <button onclick="myFunction()">11th</button>
+    <button onclick="myFunction()">12th</button></td><td>
+    <button onclick="myFunction()">&nbsp; 1st year </button>
+    <button onclick="myFunction()">&nbsp;2nd year</button>
+    <button onclick="myFunction()">&nbsp; 3rd year</button>
+    <button onclick="myFunction()">final year</button></td>
 <td><img src="images\utd1.png" style="	width: 200px;
 	height: 200px;
 	float: right;"></td></tr></table>
@@ -262,57 +309,61 @@ button:hover{
 		
     <table>
     	<tr><td>
-    <button>Competitve exams</button><button>Goverment exams</button><button> &nbsp;  &nbsp; Other exams &nbsp; &nbsp;</button></td><td><img src="images\utd2.png" style="float:right; width:220px;height:215px;"></td></tr></table>
+    <button onclick="myFunction()" style="width:110px;" > Competitve exams</button>
+    <button onclick="myFunction()"  style="width:110px;">Goverment exams</button>
+    <button onclick="myFunction()" style="width:110px;">  Other exams </button></td>
+    <td><img src="images\utd2.png" style="float:right; width:220px;height:215px;"></td></tr></table>
 
 	</div>
-	<!-- <div class="goverment">
+  <div class="ques">
+		<h5><i>Have you been spending your months to prepare for any competitive exams?</i></h5>
+		<br>
+	<input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" >
+<label class="btn btn-outline-primary" for="option1">YES</label>
 
-	</div> -->
+<input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+<label class="btn btn-outline-primary" for="option2">NO</label>
+<img src="images\utd4.png" style="float:right; width:210px;height:190px;">
+	
+	</div>
+	<div class="extra" style="padding-left: 50px;">
+   <h5 ><i>What do you like doing besides studying?</i></h5>
+    <table>
+    	<tr><td>
+    <button>Blogging</button>
+    <button>Vlogging</button>
+    <button>Travelling</button>
+    <button>Writing</button>
+</td><td>
+    <button>Loves Art </button>
+    <button>Yoga </button>
+    <button>Gaming</button>
+    <button>Musician</button>
+</td><td>
+  <button>Cooking </button>
+  <button> Filming</button>
+  <button>Editing </button>
+  <button>Speaker</button>
+</td> </tr></table>
+</div>
+<div class="refer">
+    <h5><i>Refer to a friend to win a FREE session with our advisor.</i></h5><br>
+    <button onclick="referFunction()"style="width:150px;">Copy link.</button>
+    <p id="refer"></p>
+    
 
 </div>
-<script src=
-"https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
-</script>
-<script type="text/javascript">
-	
-  var firebaseConfig = {
-    apiKey: "AIzaSyCoYaY3RtzKGLZeT1gzaoOY2zgw_MxeZ0Y",
-    authDomain: "careercounselling-42088.firebaseapp.com",
-    databaseURL: "https://careercounselling-42088-default-rtdb.firebaseio.com",
-    projectId: "careercounselling-42088",
-    storageBucket: "careercounselling-42088.appspot.com",
-    messagingSenderId: "82986918340",
-    appId: "1:82986918340:web:8a44ca303147476b4f0491",
-    measurementId: "G-9ZECQ9C6XE"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  
-        firebase.initializeApp(firebaseConfig);
-        var UserName,pass;
-        function submiit(){
-          
-          UserName = document.getElementById('UserName').value; 
-          pass = document.getElementById('pass').value;
-         // document.getElementById("userr").innerHTML = UserName;
-          firebase.database().ref('users/'+UserName).on('value',function(snapshot){
-
-            if(snapshot.val().password == pass){
-              document.getElementById("name").innerHTML = snapshot.val().name;
-            document.getElementById("email").innerHTML = snapshot.val().Email;
-            document.getElementById("phone").innerHTML = snapshot.val().phoneNo;
-            } else {
-              document.getElementById("name").innerHTML = "Error";
-            }
-            
-          });
-          
-         
-        }
-  </script>
+</div>
 
 <script>
-$(document).ready(function(){
+  function myFunction() {
+  alert("Your response has been recorded, We will mail you shortly!!");
+}
+function referFunction() {
+      document.getElementById("refer").innerHTML = "Link Copied, share with your freinds!";
+    }
+
+	$(document).ready(function(){
   $("#ButtonId1").toggle(
     function(){$("#ButtonId1").css({"background-color": "#8860D0","color": "white"});},
  
@@ -328,18 +379,22 @@ $(document).ready(function(){
  
     function(){$("#ButtonId3").css({"background-color": "#f7f7f7","color": "#0275d8"});
   });
-  //   $("#ButtonId4").toggle(
-  //   function(){$("#ButtonId4").css({"background-color": "#8860D0","color": "#f7f7f7"});},
- 
-  //   function(){$("#ButtonId4").css({"background-color": "#f7f7f7","color": "#0275d8"});
-  // });
     $("#ButtonId5").toggle(
     function(){$("#ButtonId5").css({"background-color": "#8860D0","color": "#f7f7f7"});},
  
     function(){$("#ButtonId5").css({"background-color": "#f7f7f7","color": "#0275d8"});
   });
+  $("#ButtonIdY").toggle(
+    function(){$("#ButtonIdY").css({"background-color": "#8860D0","color": "#f7f7f7"});},
+ 
+    function(){$("#ButtonIdY").css({"background-color": "#f7f7f7","color": "#0275d8"});
+  });
+  $("#ButtonIdN").toggle(
+    function(){$("#ButtonIdN").css({"background-color": "#8860D0","color": "#f7f7f7"});},
+ 
+    function(){$("#ButtonIdN").css({"background-color": "#f7f7f7","color": "#0275d8"});
+  });
 });
-
 </script>
   
 </body>
