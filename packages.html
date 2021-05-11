@@ -164,12 +164,13 @@ button:hover{
 		<ASIDE>
 		<div class="login">
   <h1>Login</h1>
-   <!--  <form method="post"> -->
-      <input type="text" name="u" placeholder="Username" required="required" id="UserName"/>
-        <input type="password" name="p" placeholder="Password" required="required" id="pass/>
-        <button type="submit" class="btn btn-info btn-block" id="submit">Let me in.</button>
-        <h2 id="userr"></h2>
-   <!--  </form> -->
+    
+      <input type="text"  placeholder="Username"  id="UserName"/>
+      <input type="password"  placeholder="Password"  id="pass" />
+        <button type="submit"  id="submit" onclick="submiit()">Let me in.</button>
+        <h4 id="name"></h4>
+        <h4 id="email"></h4>
+        <h4 id="phone"></h4>
     </div>
 </ASIDE>
 	</div>
@@ -269,9 +270,49 @@ button:hover{
 	</div> -->
 
 </div>
+<script src=
+"https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+</script>
+<script type="text/javascript">
+	
+  var firebaseConfig = {
+    apiKey: "AIzaSyCoYaY3RtzKGLZeT1gzaoOY2zgw_MxeZ0Y",
+    authDomain: "careercounselling-42088.firebaseapp.com",
+    databaseURL: "https://careercounselling-42088-default-rtdb.firebaseio.com",
+    projectId: "careercounselling-42088",
+    storageBucket: "careercounselling-42088.appspot.com",
+    messagingSenderId: "82986918340",
+    appId: "1:82986918340:web:8a44ca303147476b4f0491",
+    measurementId: "G-9ZECQ9C6XE"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+        firebase.initializeApp(firebaseConfig);
+        var UserName,pass;
+        function submiit(){
+          
+          UserName = document.getElementById('UserName').value; 
+          pass = document.getElementById('pass').value;
+         // document.getElementById("userr").innerHTML = UserName;
+          firebase.database().ref('users/'+UserName).on('value',function(snapshot){
+
+            if(snapshot.val().password == pass){
+              document.getElementById("name").innerHTML = snapshot.val().name;
+            document.getElementById("email").innerHTML = snapshot.val().Email;
+            document.getElementById("phone").innerHTML = snapshot.val().phoneNo;
+            } else {
+              document.getElementById("name").innerHTML = "Error";
+            }
+            
+          });
+          
+         
+        }
+  </script>
 
 <script>
-	$(document).ready(function(){
+$(document).ready(function(){
   $("#ButtonId1").toggle(
     function(){$("#ButtonId1").css({"background-color": "#8860D0","color": "white"});},
  
@@ -298,25 +339,7 @@ button:hover{
     function(){$("#ButtonId5").css({"background-color": "#f7f7f7","color": "#0275d8"});
   });
 });
-var firebaseConfig = {
-    apiKey: "AIzaSyCoYaY3RtzKGLZeT1gzaoOY2zgw_MxeZ0Y",
-    authDomain: "careercounselling-42088.firebaseapp.com",
-    databaseURL: "https://careercounselling-42088-default-rtdb.firebaseio.com",
-    projectId: "careercounselling-42088",
-    storageBucket: "careercounselling-42088.appspot.com",
-    messagingSenderId: "82986918340",
-    appId: "1:82986918340:web:8a44ca303147476b4f0491",
-    measurementId: "G-9ZECQ9C6XE"
-  };
-  
-        firebase.initializeApp(firebaseConfig);
-        var UserName;
-        document.getElementById('submit').onclick = function(){
-          UserName = document.getElementById('UserName').value; 
-          firebase.database().ref('users/'+ UserName).on('value',function(snapshot){
-              document.getElementById('pass').value = snapshot.val().userName;
-          });
-        }
+
 </script>
   
 </body>
