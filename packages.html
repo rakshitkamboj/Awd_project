@@ -17,6 +17,8 @@ body{
 .topnav {
   background-color: #8860D0;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Style the links inside the navigation bar */
@@ -174,6 +176,10 @@ background-color: lightblue;
   <!-- <a class="active" href="#home">Home</a> -->
   <!-- <button class="Register" onclick="window.location.href='PROJECT.html'">Home</button> -->
   <button class="Register" onclick="window.location.href='PROJECT.html'" class="btn"><i class="fa fa-home"> Home</i></button>
+  <div>
+    <span style="font-size: 30px; color: #fae1dd;">Welcome, </span>
+    <strong id="name" style="font-size: 30px; margin-right: 14px; color: #fae1dd;"></strong>
+  </div>
  </div>
 
 	<div class="mainn">
@@ -185,10 +191,11 @@ background-color: lightblue;
    <!--  <form method="post"> -->
     <input type="text"  placeholder="Username"  id="UserName"/>
     <input type="password"  placeholder="Password"  id="pass" />
-      <button type="submit"  id="submit" onclick="submiit()">Let me in.</button>
-      <h4 id="name"></h4>
-      <h4 id="email"></h4>
-      <h4 id="phone"></h4>
+      <button type="submit"  id="submit" onclick="submiit()" class="btn btn-primary">Let me in.</button>
+      <br><br>
+      <strong style="font-size: 16px;">Personal Information:</strong><br><br>
+      <h4 id="email" style="font-size: 15px;"></h4>
+      <h4 id="phone" style="font-size: 15px;"></h4>
    <!--  </form> -->
     </div>
 </ASIDE>
@@ -389,7 +396,8 @@ background-color: lightblue;
             document.getElementById("email").innerHTML = snapshot.val().Email;
             document.getElementById("phone").innerHTML = snapshot.val().phoneNo;
             } else {
-              document.getElementById("name").innerHTML = "Error";
+              alert("Your Username or Password is INCORRECT");
+              // document.getElementById("name").innerHTML = "Error";
             }
 
           });
@@ -403,7 +411,7 @@ background-color: lightblue;
   alert("Your response has been recorded, We will mail you shortly!!");
 }
 function referFunction() {
-      document.getElementById("refer").innerHTML = "Link Copied, share with your freinds!";
+      document.getElementById("refer").innerHTML = "Link Copied, share with your friends!";
     }
 
 	$(document).ready(function(){
