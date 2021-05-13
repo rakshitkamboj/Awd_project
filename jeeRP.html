@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>JEE Main Rank Predictor</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<style type="text/css">
 		.ALL{
 			border-color:pink;
@@ -87,14 +88,18 @@
 			text-align: center;
 
 		}
-		#title h1{
-			
-		}
+		
+		
 		#Home{
 			position: fixed;
 			font-size: 25px;
 			padding: 20px;
 
+		}
+		#22{
+			text-align: center;
+			padding-left: 40px;
+			margin-left: 40px;
 		}	
 
 </style>
@@ -128,7 +133,7 @@
 </p>
 </div>
 <h2>JEE Main Rank Predictor 2021</h2>
-<form id="theForm">
+
 	<table id="ini_form_table" style="width: 500px; margin: 0px auto;">
 		<tbody>
 			<tr>
@@ -150,17 +155,24 @@
 				<td>
 					<input name="action" type="hidden" value="ini_jee_rank">
 				</td>
-				<td><button id="lastbtn" onclick="myFunction()" style="padding: 24px;">Dont Be Shy, Click : )</button>
+				<td><button id="lastbtn"  style="padding: 24px;">Dont Be Shy, Click : )</button>
 </td>
 			</tr>
 		</tbody>
 	</table>
-</form>
+<div style="height: 0px; width: 0px;background-color: blue;" id="22"><h1 id="rankk"></h1></div>
+
 <script type="text/javascript">
-	
-function myFunction() {
-   alert("Our server is currently down.\nPlease try again later.");
-}
+	$("#lastbtn").click(function(){
+  $("#22").animate({
+    
+    
+    height: '150px',
+    width: '150px'
+  });
+}); 
+  
+
 </script>
 
 
