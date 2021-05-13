@@ -2,7 +2,10 @@
 <html>
 <head>
     <title>Career Counselling</title>
+    <link rel="icon" href="C:\Users\raman\Downloads\1.png"  sizes="16x16">
     <link rel="stylesheet" href="PROJECT.css">
+    <link rel="stylesheet" type="text/css" href="try.css
+    ">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -95,11 +98,17 @@
 }
     </style>
 </head>
-<body>
+<body > 
+    <div class="loader_bg">
+        <div class="loader"> </div>
+        </div>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,300' rel='stylesheet' type='text/css'>
     <header id="body-header">
+        
+        
+     
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" id="nav_bar">
-            <a class="navbar-brand" href="#">Career Counselling</a>
+            <a class="navbar-brand" href="#"><img src="C:\Users\raman\Downloads\1.png" width="27px" height="27px"> Career Barista</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -549,6 +558,10 @@
             </div>
           </footer>
           <script >
+setTimeout(function(){
+    $('.loader_bg').fadeToggle();
+},1500);
+
 const counters = document.querySelectorAll('.counter');
 const speed = 500; // The lower the slower
 

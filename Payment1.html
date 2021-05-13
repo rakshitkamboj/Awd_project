@@ -132,6 +132,8 @@
     		margin-top: 20px;
   		}
 	}
+
+
 	/*MODAL*/
 	.modal-confirm {		
 		color: #636363;
@@ -213,11 +215,12 @@
   		border-radius: 5px;
   		cursor: pointer;
 	}
+
+	 
 	</style>
 </head>
 <body>
 	
-
 
 <div class="wrapper">
   <div class="payment">
@@ -258,7 +261,7 @@
     </div>
   </div>
 </div>
-
+ 
 <div id="myModal" class="modal fade">
 	<div class="modal-dialog modal-confirm">
 		<div class="modal-content">
@@ -280,6 +283,9 @@
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+	<script type="text/javascript"> setTimeout(function(){
+    $('.loader_bg').fadeToggle();
+},1500);</script>
 
 </body>
 </html>
