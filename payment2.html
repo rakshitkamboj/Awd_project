@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -11,7 +11,23 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){
+    $('input[type="radio"]').click(function(){
+        var inputValue = $(this).attr("value");
+        var targetBox = $("." + inputValue);
+        $(".box").not(targetBox).hide();
+        $(targetBox).show();
+    });
+});
+	</script>
 	<style type="text/css">
+		  .box{
+        color: black;
+        /* padding: 5px; */
+        display: none;
+        margin-top: 10px;
+    }
 		@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Ubuntu');
 		*{
 			margin: 0;
@@ -21,14 +37,14 @@
 		}
 
 		body{
-			background: #2196F3;
-  			margin: 0 10px;
+			background-image:linear-gradient(#8860d0,#84ceeb);
+  			margin: 0 5px;
 		}
 
 		.payment{
 			background: #f8f8f8;
   			max-width: 360px;
-  			margin: 80px auto;
+  			margin: 60px auto;
   			height: auto;
   			padding: 35px;
   			padding-top: 70px;
@@ -40,12 +56,12 @@
   		text-align: center;
   		letter-spacing: 2px;
   		margin-bottom: 40px;
-  		color: #0d3c61;
+  		color: black;
 	}
 
 	.form .label{
   		display: block;
-  		color: #555555;
+  		color: black;
  		 margin-bottom: 6px;
 	}
 
@@ -53,13 +69,13 @@
  		padding: 13px 0px 13px 25px;
   		width: 100%;
   		text-align: center;
-  		border: 2px solid #dddddd;
+  		border: 2px solid black;
   		border-radius: 5px;
   		letter-spacing: 1px;
   		word-spacing: 3px;
   		outline: none;
   		font-size: 16px;
-  		color: #555555;
+  		color: #5680e9;
 		}
 
 	.card-grp{
@@ -84,7 +100,7 @@
   		bottom: 12px;
   		left: 15px;
   		font-size: 20px;
-  		color: #555555;
+  		color: #5680e9;
 	}
 
 	.payment-logo{
@@ -94,7 +110,7 @@
   		transform: translateX(-50%);
   		width: 100px;
   		height: 100px;
-  		background: #f8f8f8;
+  		background:white;
 		border-radius: 50%;
  		box-shadow: 0 0 5px rgba(0,0,0,0.2);
   		text-align: center;
@@ -108,13 +124,13 @@
   		left: 5px;
   		width: 90px;
   		height: 90px;
-  		background: #2196F3;
+  		background: #5ab9ea;
   		border-radius: 50%;
 	}
 
 	.payment-logo p{
   		position: relative;
-  		color: #f8f8f8;
+  		color: white;
   	font-family: 'Baloo Bhaijaan', cursive;
   	font-size: 58px;
 	}
@@ -132,11 +148,9 @@
     		margin-top: 20px;
   		}
 	}
-
-
 	/*MODAL*/
 	.modal-confirm {		
-		color: #636363;
+		color: black;
 		width: 325px;
 		margin: 30px auto;
 	}
@@ -180,7 +194,7 @@
 		height: 95px;
 		border-radius: 50%;
 		z-index: 9;
-		background: #82ce34;
+		background: #8860d0;
 		padding: 15px;
 		text-align: center;
 		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
@@ -196,31 +210,48 @@
     .modal-confirm .btn {
         color: #fff;
         border-radius: 4px;
-		background: #82ce34;
+		background: #8860d0;
 		text-decoration: none;
 		transition: all 0.4s;
         line-height: normal;
         border: none;
     }
 	.modal-confirm .btn:hover, .modal-confirm .btn:focus {
-		background: #6fb32b;
+		background: #8860d0;
 		outline: none;
 	}
 	.trigger-btn {
 		margin-top: 40px;
-  		background: #2196F3;
+  		background: #5ab9ea;
   		padding: 12px;
   		text-align: center;
   		color: #f8f8f8;
   		border-radius: 5px;
   		cursor: pointer;
 	}
+	.payment-details div{
+		 display: flex;
+      flex-direction: row;
+      /* justify-content: start; */
+      /* align-items: flex-start; */
+      justify-content: space-between;
 
-	 
+	}
+	span{
+		 height: 1rem;
+        margin-bottom: 0.5rem;
+        padding: 0;
+	}
+	.payment-details{
+		 margin-top: 1rem;
+    width: 100%;
+	}
+
 	</style>
 </head>
 <body>
 	
+
 
 <div class="wrapper">
   <div class="payment">
@@ -253,7 +284,46 @@
           <i class="fas fa-lock"></i>
         </div>
       </div>
+
+         <div>
+             
+        <label><input type="radio" name="colorRadio" value="red"> Pay ₹300</label> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label><input type="radio" name="colorRadio" value="green"> Pay ₹500</label>
         
+    </div>
+    <div class="red box"><div class="payment-details">
+		<div class="subtotal">
+		  <span class="category">Sub-Total:</span> 
+		  <span class="price">₹300.00 </span>
+		</div>
+		<div class="gst">
+		  <span class="category">18% GST:</span> 
+		  <span class="price">₹54.00 </span>
+		</div><br>
+		
+		<div class="total">
+		  <span class="category"><b>Total:</b></span> 
+		  <span class="price"><b>₹354.00 </b></span>
+		</div>
+	  </div>
+  </div>
+    <div class="green box"><div class="payment-details">
+		<div class="subtotal">
+		  <span class="category">Sub-Total:</span> 
+		  <span class="price">₹500.00 </span>
+		</div>
+		<div class="gst">
+		  <span class="category">18% GST:</span> 
+		  <span class="price">₹90.00 </span>
+		</div><br>
+		
+		<div class="total">
+		  <span class="category"><b>Total:</b></span> 
+		  <span class="price"><b>₹590.00 </b></span>
+		</div>
+	  </div></div>
+   
       <div href="#myModal" class="trigger-btn" data-toggle="modal">
         Pay
       </div> 
@@ -261,7 +331,7 @@
     </div>
   </div>
 </div>
- 
+
 <div id="myModal" class="modal fade">
 	<div class="modal-dialog modal-confirm">
 		<div class="modal-content">
@@ -283,9 +353,6 @@
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-	<script type="text/javascript"> setTimeout(function(){
-    $('.loader_bg').fadeToggle();
-},1500);</script>
 
 </body>
 </html>

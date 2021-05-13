@@ -114,8 +114,8 @@
 #AboutWeb{
   background-color: #C1C8E4;
   padding: 30px;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 160px;
+  padding-right: 160px;
 }
 #AboutWeb h2{
   text-align: center;
@@ -125,7 +125,6 @@
 .Impacted{
   display:inline-block;
   height: 110px;
-  width: 300px;
   text-align: center;
 
 }
