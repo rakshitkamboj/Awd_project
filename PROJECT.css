@@ -338,6 +338,11 @@
   .footer address {
     font-style: normal;
     color: #5680E9;
+
+  }
+  address div{
+    display: flex;
+    justify-content: space-around;
   }
   
   .footer__btn {
