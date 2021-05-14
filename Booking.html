@@ -1,8 +1,8 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Feedback</title>
-  <link rel="icon" href="images\1.png">
+	<title></title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   <style type="text/css">
@@ -15,26 +15,29 @@
   		outline: none;
   		color: black;
 	}
-	section {
+	/*section {
   		position: absolute;
   		height: 100%;
   		width: 100%;
   		background-image:linear-gradient(#8860d0,#84ceeb);
   		background-size: cover;
   		background-position: center;
-	}
+	}*/
 	body {
   		display: flex;
   		min-height: 100vh;
   		align-items: center;
   		justify-content: center;
+  		background-image:linear-gradient(#8860d0,#84ceeb);
 	}
 	.container {
-  		width: 360px;
+  		width: 450px;
   		background:white;
   		box-shadow: 0 0 8px rgba(250, 250, 250, 0.6);
   		opacity: 0.9;
   		transform: scale(1.2);
+  		margin-top: 30px;
+  		margin-bottom: 30px;
 	}
 	.container form {
   		width: 100%;
@@ -64,14 +67,29 @@
   		padding: 0 15px;
   		padding-right: 45px;
   		font-size: 20px;
+  		color: black;
 	}
-	form textarea {
+	form fieldset {
   		padding: 5px 15px;
   		border: 1px solid black;
   		border-radius: 3px;
-  		font-size: 20px;
+  		font-size: 15px;
   		width: 100%;
   		margin: 4px 0;
+  		height: 200px;
+
+	}
+	legend{
+		color: black;
+	}
+	fieldset input{
+		width: 68%;
+  		height: 25px;
+  		margin: 4px 0;
+  		border: 1px solid black;
+  		border-radius: ;
+  		font-size: 15px;
+  		color: black;
 	}
 	form button {
   		margin-top: 5px;
@@ -108,20 +126,29 @@
   </style>
 </head>
 <body>
-	<section></section>
+	<!-- <section></section> -->
 	<div class="container">
 		<form>
-			<h1>Give your Feedback</h1>
+			<h1>Book a Session</h1>
 			<div class="id">
-				<input type="text" placeholder="Full name">
+				<input type="text" placeholder="Full name" required>
 				<i class="far fa-user"></i>
 			</div>
 			<div class="id">
-				<input type="email" placeholder="Email address" >
+				<input type="email" placeholder="Email address" required>
 				<i class="far fa-envelope"></i>
 			</div>
-			<textarea cols="15" rows="5" placeholder="Enter your opinions here.."></textarea>
-			<button>Send</button>
+			<div class="id">
+				<input type="text" placeholder="Phone number" pattern="[789][0-9]{9}" required>
+				<i class="fa fa-phone fa-flip-vertical"></i>
+			</div>
+			<fieldset>
+				<legend>Book appropriate dates</legend><br>
+  				<input type="date" id="birthday" name="birthday" required><br>
+  				<input type="date" id="birthday" name="birthday"><br>
+  				<input type="date" id="birthday" name="birthday"><br>
+ 			</fieldset>			
+ 			<button>Book session!</button>
 		</form>
 	</div>
 </body>
