@@ -2,13 +2,13 @@
 <html>
 <head>
 	<title>JEE Main Rank Predictor</title>
-<<<<<<< HEAD
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-=======
+
 	<link rel="stylesheet" type="text/css" href="try.css">
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
->>>>>>> 4c4b42aa07ae6d1998b6f55391b46331c9a4e569
+
 	<style type="text/css">
 		 
 		@keyframes arrow-spin {
@@ -309,24 +309,31 @@
 				<td>
 					<input name="action" type="hidden" value="ini_jee_rank">
 				</td>
-				<td><button id="lastbtn"  style="padding: 24px;">Dont Be Shy, Click : )</button>
+				<td><button id="lastbtn"  style="padding: 24px;" onclick="myFunction()" >Dont Be Shy, Click : )</button>
 </td>
 			</tr>
 		</tbody>
 	</table>
-<div style="height: 0px; width: 0px;background-color: blue;" id="22"><h1 id="rankk"></h1></div>
+
+	<div style="border: 2px solid #cc147f;height: 400px;width: 500px;margin-left: 500px;justify-content:center;" id="dicc">
+		<h3>Predicted JEE Main 2020 Rank</h3>
+		<h2 style="margin-bottom: 6rem;"> ~ 
+			<b id="markss"></b>
+		</h2>
+		<ul class="stats-tabs"><li>Approx. <b>99.742013</b> Percentile Expected</li><li>Approx. <b>2787 ~ 2900</b> Rank Range</li>
+		<li>Approx. <b>113</b> Students with similar percentile</li></ul></div>
 
 <script type="text/javascript">
+ $(document).ready(function() {
+    
+     $("#dicc").hide("slow");
+    
 
-	$("#lastbtn").click(function(){
-  $("#22").animate({
-    
-    
-    height: '150px',
-    width: '150px'
-  });
-}); 
-  
+     $("#lastbtn").click(function () {
+     $("#dicc").show(1000);
+    });
+
+   });
 
 
 	setTimeout(function(){
@@ -337,7 +344,38 @@
 <script type="text/javascript">
 	
 function myFunction() {
-   alert("Our server is currently down.\nPlease try again later.");
+  
+  
+  switch (true){
+
+case document.getElementById('score').value < 0:
+document.getElementById('markss').innerHTML = '1071460 – 1058151';
+	break;    
+case  document.getElementById('score').value >= 0 && document.getElementById('score').value <= 80:
+document.getElementById('markss').innerHTML = '796929 - 63079';
+	break;
+
+case  document.getElementById('score').value >= 81 &&  document.getElementById('score').value <= 150:
+document.getElementById('markss').innerHTML = '62400 - 9302';
+	break;
+
+case document.getElementById('score').value >= 151 &&  document.getElementById('score').value <= 200:
+document.getElementById('markss').innerHTML = '8949 - 2004';
+	break;
+case document.getElementById('score').value >= 201 &&  document.getElementById('score').value <= 250:
+document.getElementById('markss').innerHTML = '1888  - 230';
+	break;
+	case document.getElementById('score').value >= 251 &&  document.getElementById('score').value <= 299:
+document.getElementById('markss').innerHTML = '210  - 24';
+	break;	
+
+	case document.getElementById('score').value == 300 :
+document.getElementById('markss').innerHTML = '1';
+	break;	
+
+default:
+document.getElementById('markss').innerHTML = 100;
+}
 }
 
 </script>
