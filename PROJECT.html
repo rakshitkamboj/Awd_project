@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Career Counselling</title>
-    <link rel="icon" href="images\1.png"  sizes="16x16">
+    <title>Career Barista</title>
+    <link rel="icon" href="images\1.png">
     <link rel="stylesheet" href="PROJECT.css">
-    <link rel="stylesheet" type="text/css" href="try.css
-    ">
+    <link rel="stylesheet" type="text/css" href="loaders.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -14,12 +13,88 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
     <style>
         
         .counter{
 
             font-size: 25px;
         }
+
+
+#popbtn {
+    box-sizing: border-box;
+  position: relative;
+  padding: 20px 50px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+#popbtn span {
+  position: relative;
+  color: white;
+  font-size: 20px;
+  font-family: Arial;
+  letter-spacing: 8px;
+  z-index: 1;
+  margin-left: 15px;
+}
+
+#popbtn .liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #4973ff;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+  transition: .5s;
+}
+
+#popbtn .liquid::after,
+#popbtn .liquid::before {
+  content: '';
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+}
+
+#popbtn .liquid::before {
+  
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animate 5s linear infinite;
+}
+
+#popbtn .liquid::after {
+  
+  border-radius: 40%;
+  background: rgba(20, 20, 20, .5);
+  animation: animate 10s linear infinite;
+}
+
+#popbtn:hover .liquid{
+  top: -120px;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
 
         /* The Modal (background) */
 .modal {
@@ -140,7 +215,7 @@
         <div id="FollowUs_Main">
             <ul id="FollowUs_2" class="text-center horizontal-list">
                 <li>
-                    Follow Us<hr>
+                    <a>Follow Us</a>
                 </li>
                 <li>
                     <a href="https://www.facebook.com/" target="_blank">Facebook</a>
@@ -156,7 +231,7 @@
     </header>
     <section id="AboutWeb">
         <h2>
-            Impact of iDreamCareer
+            Impact of Career Barista
         </h2>
         <br>
        
@@ -179,7 +254,7 @@
             </div>
         </div>
          <p style="margin: 20px 0px 20px 0px; font-size: 26px" >
-            iDreamCareer is the <b>INDIA’S LARGEST</b> unbiased career counseling venture that works with 
+            CAREER BARISTA is the <b>INDIA’S LARGEST</b> unbiased career counseling venture that works with 
             <b>2.5 MILLION STUDENTS</b> yearly while ensuring <b>100% DATA PRIVACY</b>. We currently work with 12 Indian State Governments & <b>73000+</b> schools across India & the Middle East.
         </p>
     </section>
@@ -446,7 +521,11 @@
         </div>
     </div>
 
-    
+    <a href="#" onclick="popup()" id="popbtn">
+  <span id="countdown"></span>
+  <div class="liquid"></div>
+</a>
+
         <footer class="footer" id="Contact_us">
             <div class="footer__addr">
               <h1 class="footer__logo">Dream About your Career</h1>
@@ -591,11 +670,50 @@ counters.forEach(counter => {
 
     updateCount();
 });
+const startingMinutes=20;
+    let time =startingMinutes*60;
 
+    const countdownEl=document.getElementById("countdown");
+    setInterval(updatecountdown,1000);
 
+    function updatecountdown(){
+
+        const minutes=Math.floor(time/60);
+        let seconds = time%60;
+
+        seconds=seconds<10 ? '0' +seconds: seconds;
+        countdownEl.innerHTML =minutes +":"+ seconds;
+        time--;
+    }
+
+function popup(){
+    swal("Now or Never!!","Once Rejected, you will not be able to grab this offer!", {
+  buttons: {
+    catch: {
+      text: "REJECT",
+      value: "catch",
+    },
+    ACCEPT: true,
+  },
+})
+.then((value) => {
+  switch (value) {
+ 
+    case "ACCEPT":
+      window.open("jeeCP.html");
+      break;
+ 
+    case "catch":
+      swal("Dammnnnn!", "You missed it forever!", "warning");
+      break;
+ 
+
+  }
+});
+}
 
 function myFunction() {
-   alert("Our server is currently down.\nPlease try again later.");
+   swal("SERVER ERROR!", "Please try again after sometime.");
 }
 // Get the modal
 var modal = document.getElementById("myModal");
