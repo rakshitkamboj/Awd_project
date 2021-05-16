@@ -265,7 +265,7 @@ background-color: lightblue;
   <!-- <button class="Register" onclick="window.location.href='PROJECT.html'">Home</button> -->
   <button class="Register" onclick="window.location.href='PROJECT.html'" class="btn"><i class="fa fa-home"> Home</i></button>
   <div>
-    <span style="font-size: 30px; color: #fae1dd;">Welcome, </span>
+    <span style="font-size: 30px; color: #fae1dd;" id="wel"> </span>
     <strong id="name" style="font-size: 30px; margin-right: 14px; color: #fae1dd;"></strong>
   </div>
  </div>
@@ -281,7 +281,7 @@ background-color: lightblue;
     <input type="password"  placeholder="Password"  id="pass" />
       <button type="submit"  id="submit" onclick="submiit()" class="btn btn-primary">Let me in.</button>
       <br><br>
-      <strong style="font-size: 16px;">Personal Information:</strong><br><br>
+      <strong style="font-size: 16px;" id="per"></strong><br><br>
       <h4 id="email" style="font-size: 14px;"></h4>
       <h4 id="phone" style="font-size: 14px;"></h4>
    <!--  </form> -->
@@ -483,6 +483,9 @@ background-color: lightblue;
           firebase.database().ref('users/'+UserName).on('value',function(snapshot){
 
             if(snapshot.val().password == pass){
+              document.getElementById('wel').innerHTML = "Welcome,";
+              document.getElementById('per').innerHTML = "Personal Information:";
+
               document.getElementById("name").innerHTML = snapshot.val().name;
             document.getElementById("email").innerHTML = snapshot.val().Email;
             document.getElementById("phone").innerHTML = snapshot.val().phoneNo;
